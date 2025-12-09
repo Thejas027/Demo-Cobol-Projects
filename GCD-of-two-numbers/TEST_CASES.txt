@@ -1,0 +1,19 @@
+Test Case 1: Basic
+Input: 48, 18
+Expected Output: 6
+
+Test Case 2: Prime Numbers
+Input: 17, 13
+Expected Output: 1
+
+Test Case 3: One number is a multiple of the other
+Input: 10, 5
+Expected Output: 5
+
+Test Case 4: Same numbers
+Input: 100, 100
+Expected Output: 100
+
+Test Case 5: Large numbers
+Input: 270, 192
+Expected Output: 6
