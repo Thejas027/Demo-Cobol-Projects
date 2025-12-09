@@ -1,0 +1,63 @@
+===== TEST CASES FOR QUADRATIC EQUATION SOLVER =====
+
+TEST CASE 1: Two Distinct Real Roots
+Equation: x² - 5x + 6 = 0
+Input: a=1, b=-5, c=6
+Expected Output: x₁ = 3, x₂ = 2
+Discriminant: 25 - 24 = 1
+
+TEST CASE 2: One Repeated Real Root
+Equation: x² - 4x + 4 = 0
+Input: a=1, b=-4, c=4
+Expected Output: x = 2
+Discriminant: 16 - 16 = 0
+
+TEST CASE 3: Complex Conjugate Roots
+Equation: x² - 2x + 5 = 0
+Input: a=1, b=-2, c=5
+Expected Output: x = 1 ± 2i
+Discriminant: 4 - 20 = -16
+
+TEST CASE 4: Another Example with Two Real Roots
+Equation: 2x² + 3x - 2 = 0
+Input: a=2, b=3, c=-2
+Expected Output: x₁ = 0.5, x₂ = -2
+Discriminant: 9 + 16 = 25
+
+TEST CASE 5: Invalid Input (a=0)
+Equation: 0x² + 3x + 5 = 0
+Input: a=0, b=3, c=5
+Expected Output: ERROR message, reprompt for input
+
+===== HOW TO TEST =====
+
+1. Compile the program:
+   cobc -x src/QUADRATIC.cbl -o bin/QUADRATIC
+
+2. Run the program:
+   ./bin/QUADRATIC
+
+3. Enter the test cases one by one and verify outputs
+
+4. Test the error handling with a=0
+
+===== MATHEMATICAL VERIFICATION =====
+
+For ax² + bx + c = 0:
+
+Discriminant (Δ) = b² - 4ac
+Roots = (-b ± √Δ) / 2a
+
+Case 1: x² - 5x + 6 = 0
+Δ = (-5)² - 4(1)(6) = 25 - 24 = 1
+x = (5 ± 1) / 2
+x₁ = 6/2 = 3 ✓
+x₂ = 4/2 = 2 ✓
+
+Case 2: x² - 4x + 4 = 0
+Δ = (-4)² - 4(1)(4) = 16 - 16 = 0
+x = 4/2 = 2 ✓
+
+Case 3: x² - 2x + 5 = 0
+Δ = (-2)² - 4(1)(5) = 4 - 20 = -16
+x = (2 ± √(-16)) / 2 = (2 ± 4i) / 2 = 1 ± 2i ✓
